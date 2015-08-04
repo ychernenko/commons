@@ -6,17 +6,17 @@ import ychernenko.commons.properties.build.PropertyBuilder;
 
 public interface PropertyDescriptor<T> {
 
-	String getKey();
+    String getKey();
 
-	boolean isRequired();
+    boolean isRequired();
 
-	String getDefaultValue();
+    String getDefaultValue();
 
-	Class<Parser<T>> getParserClass();
+    Class<Parser<T>> getParserClass();
 
-	Class<PropertyBuilder<T>> getLoaderClass();
+    Class<PropertyBuilder<T>> getLoaderClass();
 
-	Class<T> getType();
+    Class<T> getType();
 
-	Class<Getter<T>> getDefaultValueHolderClass();
+    Class<Getter<T>> getDefaultValueHolderClass();
 }

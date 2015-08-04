@@ -12,5 +12,5 @@ import ychernenko.commons.core.transform.parse.Parser;
 @Target(METHOD)
 public @interface PropertyParser {
 
-	Class<? extends Parser> value();
+    Class<? extends Parser> value();
 }

@@ -6,21 +6,22 @@ import javax.xml.datatype.Duration;
 
 public class DurationParser implements Parser<Duration> {
 
-	private static final DatatypeFactory FACTORY;
-	static {
-		try {
-			FACTORY = DatatypeFactory.newInstance();
-		} catch (DatatypeConfigurationException e) {
-			throw new ParseException(e);
-		}
-	}
+    private static final DatatypeFactory FACTORY;
 
-	@Override
-	public Duration parse(String value) {
-		return FACTORY.newDuration(value);
-	}
+    @Override
+    public Duration parse(String value) {
+        return FACTORY.newDuration(value);
+    }
 
-	public static String asString(long millis) {
-		return FACTORY.newDuration(millis).toString();
-	}
+    public static String asString(long millis) {
+        return FACTORY.newDuration(millis).toString();
+    }
+
+    static {
+        try {
+            FACTORY = DatatypeFactory.newInstance();
+        } catch (DatatypeConfigurationException e) {
+            throw new ParseException(e);
+        }
+    }
 }

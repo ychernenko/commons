@@ -10,5 +10,5 @@ import java.lang.annotation.Target;
 @Target(METHOD)
 public @interface DefaultValue {
 
-	String value();
+    String value();
 }

@@ -13,5 +13,5 @@ import ychernenko.commons.core.Getter;
 @Target(METHOD)
 public @interface DefaultValueGetter {
 
-	Class<? extends Getter> value();
+    Class<? extends Getter> value();
 }

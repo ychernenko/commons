@@ -10,5 +10,5 @@ import java.lang.annotation.Target;
 @Target(METHOD)
 public @interface Key {
 
-	String value();
+    String value();
 }

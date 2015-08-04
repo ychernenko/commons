@@ -12,5 +12,5 @@ import ychernenko.commons.properties.build.PropertyBuilder;
 @Target(METHOD)
 public @interface Builder {
 
-	Class<? extends PropertyBuilder> value();
+    Class<? extends PropertyBuilder> value();
 }

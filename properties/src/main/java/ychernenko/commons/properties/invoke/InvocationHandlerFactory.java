@@ -6,5 +6,5 @@ import ychernenko.commons.properties.source.PropertiesSource;
 
 public interface InvocationHandlerFactory {
 
-	InvocationHandler create(Class config, PropertiesSource source);
+    InvocationHandler create(Class config, PropertiesSource source);
 }
