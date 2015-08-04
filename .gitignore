@@ -1,0 +1,9 @@
+# Linux
+*.swp
+
+# Maven
+target
+
+# IDEA
+.idea
+*.iml
