@@ -5,5 +5,5 @@ import ychernenko.commons.properties.source.PropertiesSource;
 
 public interface PropertyBuilder<T> {
 
-    T load(DefaultPropertyDescriptor<T> descriptor, PropertiesSource source);
+    T build(DefaultPropertyDescriptor<T> descriptor, PropertiesSource source);
 }

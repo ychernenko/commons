@@ -14,7 +14,7 @@ public interface PropertyDescriptor<T> {
 
     Class<Parser<T>> getParserClass();
 
-    Class<PropertyBuilder<T>> getLoaderClass();
+    Class<PropertyBuilder<T>> getBuilderClass();
 
     Class<T> getType();
 

@@ -47,7 +47,7 @@ public class DefaultInvocationHandlerFactory implements InvocationHandlerFactory
 
     private <T> PropertyEntry getPropertyEntry(Method method, PropertiesSource source) {
         DefaultPropertyDescriptor<T> descriptor = descriptorFactory.create(method);
-        Object value = propertyBuilderFactory.create(descriptor).load(descriptor, source);
+        Object value = propertyBuilderFactory.create(descriptor).build(descriptor, source);
         return new PropertyEntry(descriptor, value);
     }
 }

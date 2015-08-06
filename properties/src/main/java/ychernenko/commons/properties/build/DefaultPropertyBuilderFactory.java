@@ -7,7 +7,7 @@ public class DefaultPropertyBuilderFactory implements PropertyBuilderFactory {
     @Override
     @SuppressWarnings("unchecked")
     public <T> PropertyBuilder<T> create(PropertyDescriptor<T> descriptor) {
-        Class<PropertyBuilder<T>> clazz = descriptor.getLoaderClass();
+        Class<PropertyBuilder<T>> clazz = descriptor.getBuilderClass();
         return clazz == null
                 ? (PropertyBuilder<T>) new DefaultPropertyBuilder<>()
                 : instantiate(clazz);

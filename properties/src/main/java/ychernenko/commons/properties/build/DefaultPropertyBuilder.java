@@ -15,7 +15,7 @@ public class DefaultPropertyBuilder<T> implements PropertyBuilder<T> {
     private ParserFactory parserFactory = new ParserFactory();
 
     @Override
-    public T load(DefaultPropertyDescriptor<T> descriptor, PropertiesSource source) {
+    public T build(DefaultPropertyDescriptor<T> descriptor, PropertiesSource source) {
         String key = descriptor.getKey();
         String string = source.getPropertyValue(key);
         if (string == null)

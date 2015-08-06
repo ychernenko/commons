@@ -11,17 +11,17 @@ public class DefaultPropertyDescriptor<T> implements PropertyDescriptor<T> {
     private final boolean required;
     private final Class<Getter<T>> defaultValueHolderClass;
     private final Class<Parser<T>> parserClass;
-    private final Class<PropertyBuilder<T>> loaderClass;
+    private final Class<PropertyBuilder<T>> builderClass;
     private String defaultValue;
 
-    public DefaultPropertyDescriptor(String key, Class<T> type, boolean required, String defaultValue, Class<Getter<T>> defaultValueHolderClass, Class<Parser<T>> parserClass, Class<PropertyBuilder<T>> loaderClass) {
+    public DefaultPropertyDescriptor(String key, Class<T> type, boolean required, String defaultValue, Class<Getter<T>> defaultValueHolderClass, Class<Parser<T>> parserClass, Class<PropertyBuilder<T>> builderClass) {
         this.key = key;
         this.type = type;
         this.required = required;
         this.defaultValue = defaultValue;
         this.defaultValueHolderClass = defaultValueHolderClass;
         this.parserClass = parserClass;
-        this.loaderClass = loaderClass;
+        this.builderClass = builderClass;
     }
 
     @Override
@@ -45,8 +45,8 @@ public class DefaultPropertyDescriptor<T> implements PropertyDescriptor<T> {
     }
 
     @Override
-    public Class<PropertyBuilder<T>> getLoaderClass() {
-        return loaderClass;
+    public Class<PropertyBuilder<T>> getBuilderClass() {
+        return builderClass;
     }
 
     @Override
@@ -67,7 +67,7 @@ public class DefaultPropertyDescriptor<T> implements PropertyDescriptor<T> {
                 ", required=" + required +
                 ", defaultValue='" + defaultValue + '\'' +
                 ", parserClass=" + parserClass +
-                ", loaderClass=" + loaderClass +
+                ", builderClass=" + builderClass +
                 '}';
     }
 }

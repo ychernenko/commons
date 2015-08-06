@@ -15,7 +15,7 @@ public class GroupPropertyBuilder implements PropertyBuilder<Map<String, String>
     }
 
     @Override
-    public Map<String, String> load(DefaultPropertyDescriptor<Map<String, String>> descriptor, PropertiesSource source) {
+    public Map<String, String> build(DefaultPropertyDescriptor<Map<String, String>> descriptor, PropertiesSource source) {
         Map<String, String> map = new HashMap<>();
         for (String name : source.getPropertyNames()) {
             if (name.startsWith(prefix)) {
